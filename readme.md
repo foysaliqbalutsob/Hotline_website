@@ -28,7 +28,7 @@ here are a some step  to create a new element by using  DOM:
 - Event bubbling is the another way events propagate in  the DOM. When an event occurs on an element (like a click on a button), it first runs on that element, then traverse up to its parentNode ,childNode , and by this way we can traverse entire  document object.
 
 
----
+
 - When an event occurs on an element like button , it first triggers on this element, then bubbles up to its parent elements, traverse all the way to the document.
 
 
