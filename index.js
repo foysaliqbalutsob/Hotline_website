@@ -14,12 +14,31 @@ for(let button of btns){
 
 
 
-button.addEventListener('click', function(event){
+button.addEventListener('click', function(){
   
     const  cardTitle = button.parentNode.parentNode.childNodes[3].innerText
     const cardNumber = button.parentNode.parentNode.childNodes[7].innerText
 
-    console.log(cardTitle,cardNumber);
+    const coin = getElement('coin-container');
+    const coinValue = parseInt(coin.children[0].innerText);
+    coin.children[0].innerText = coinValue - 20;
+
+    if(coinValue < 20) {
+        alert("Not enough coins");
+        return;
+    }
+
+    alert(` 📞 Calling ${cardTitle} ${cardNumber} ...`);
+
+
+    
+
+    const div = document.createElement('div');
+
+
+
+
+
 
     document.getElementById('history-container').innerHTML += `
         <div class="h-[100px] rounded-lg bg-[var(--Surface,rgba(250,250,250,1))] p-4 mb-4 flex justify-between">
@@ -50,17 +69,6 @@ button.addEventListener('click', function(event){
  
 
 
-
-
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -72,3 +80,25 @@ button.addEventListener('click', function(event){
             document.getElementById('history-container').innerHTML = '';
         }
     )
+
+    const copyButtons = document.getElementsByClassName('copy-btn');
+    for (let button of copyButtons) {
+        button.addEventListener('click', function () {
+
+            console.log("Copy button clicked");
+            const copyNumberCount = getElement('copy-number-count').innerText;
+            const copyNumberCountParseInt = parseInt(copyNumberCount);
+            getElement('copy-number-count').innerText = copyNumberCountParseInt + 1;
+            console.log(copyNumberCountParseInt + 1);
+
+
+
+            const cardTitle = button.parentNode.parentNode.childNodes[3].innerText;
+            console.log(cardTitle);
+            const cardNumber = button.parentNode.parentNode.childNodes[7].innerText;
+
+            console.log(cardNumber);
+            alert(`Copied ${cardNumber} to clipboard`);
+            
+        });
+    }
