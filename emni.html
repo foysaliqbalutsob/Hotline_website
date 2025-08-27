@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Time on Click</title>
+</head>
+<body>
+    <button id="showTimeBtn">Show Current Time</button>
+    <p id="timeDisplay"></p>
+
+    <script>
+        const button = document.getElementById('showTimeBtn');
+        const display = document.getElementById('timeDisplay');
+
+        button.addEventListener('click', () => {
+            const now = new Date();
+            const formattedTime = now.toLocaleString(); // "8/27/2025, 2:30:45 PM"
+            display.textContent = formattedTime;
+        });
+    </script>
+</body>
+</html>
