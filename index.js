@@ -99,6 +99,26 @@ button.addEventListener('click', function(){
 
             console.log(cardNumber);
             alert(`Copied ${cardNumber} to clipboard`);
+
+            navigator.clipboard.writeText(cardNumber);
             
         });
     }
+
+
+
+
+    const heartIcons = document.getElementsByClassName('heart-icon');
+
+    for (let icon of heartIcons) {
+        icon.addEventListener('click', function () {
+            console.log("Heart icon clicked");
+
+            const heartCount = parseInt(getElement('heart-count').innerText);
+            getElement('heart-count').innerText = heartCount + 1;
+            console.log(heartCount);
+
+        });
+    }   
+    
+ 
