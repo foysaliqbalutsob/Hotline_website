@@ -4,6 +4,10 @@ function getElement(id){
 
 }
 
+const now = new Date();
+const timeOnly = now.toLocaleTimeString();
+console.log(timeOnly);
+
 const btns = document.getElementsByClassName('card-btn');
 
 for(let button of btns){
@@ -24,7 +28,7 @@ button.addEventListener('click', function(event){
             <h1 class ="text-[18px] text-[var(--Gray,rgba(92,92,92,1))]">${cardNumber}</h1>
         </div>    
         <div class="flex items-center">
-        <h1>time</h1>
+        <h1 id="time">${timeOnly}</h1>
 
         </div>
 
