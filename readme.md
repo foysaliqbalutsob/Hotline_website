@@ -53,10 +53,10 @@ As a devloper we need to efficient our code ,cleaner and dynamic.A website have 
 | preventDefault()             | stopPropagation() |
 |----------------------------|-------------|
 |Its syntax is -:event.preventDefault();|Its syntax is:event stopPropagation();|     
-|Prevent the default action of browsers taking on that event.|Prevent further propagation of current events by parent or child elements.|
-|     it prevents the browser from following a link. |It can not stop the default behavior of the browser.|
+|prevent the default action of browsers taking on that event.normally it use in form submission.when we use it in form to stop form normal behavior  | it propagate of current event by parentNode or ChildNodes.it stop bubbling.
+|     it prevents the browser from  |It can not stop the default behavior of the browser.|
 |          It does not return value  |   It does not have any return type   |
-|   This method can cancel the event     | his method is used to prevent the parent element from accessing the event. |
+|   This function can stop the event     | this function is used to prevent the parent element from accessing the event. |
 
 
 
