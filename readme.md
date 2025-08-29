@@ -8,7 +8,7 @@
 
 - getElementsByClassName('className'): It  returns an HTMLCollection which contain multiple elements in the  same class name.we can easily access each element using an index, like items[0], items[1], etc.It takes  className and actually returns array-like-object.
 
-- querySelector('selector'):It returns the first element that matches the given CSS  selector (for example #id, .class, div p).
+- querySelector('selector'):It returns only first element that matches the given CSS  selector (for example #id, .class, div p).
 
 - querySelectorAll('selector'): It returns a NodeList, which contains all the elements that match the given selector.It take CSS selector only
 

@@ -25,6 +25,8 @@ button.addEventListener('click', function(){
 
     if(coinValue < 20) {
         alert("Not enough coins");
+        coin.children[0].innerText = 0;
+
         return;
     }
 
